@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 
 // import { useAuth } from "../../hooks/auth";
-// import { UserPhoto } from "../UserPhoto";
+import { UserPhoto } from "../UserPhoto";
 
 import { styles } from "./styles";
 
@@ -14,15 +14,15 @@ export function Header() {
     <View style={styles.container}>
       <LogoSvg />
 
+      {/* <UserPhoto imageUri={user?.avatar_url} /> */}
       <View style={styles.logoutButton}>
-        {/* {user && (
-          <TouchableOpacity onPress={signOut}>
-            <Text style={styles.logoutText}>Sair</Text>
-          </TouchableOpacity>
-        )} */}
-
-        {/* <UserPhoto imageUri={user?.avatar_url} /> */}
+        <TouchableOpacity /*onPress={signOut}*/>
+          <Text style={styles.logoutText}>Sair</Text>
+        </TouchableOpacity>
       </View>
+      <UserPhoto imageUri="http://github.com/edsonjuniornarvaes.png" />
+      {/* {user && ( */}
+      {/* )} */}
     </View>
   );
 }
